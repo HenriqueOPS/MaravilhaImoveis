@@ -1,6 +1,6 @@
 header{
   background-color: #232323;
-  width: 100%;
+  width: 100vw;
   height: 90px;
   display: flex;
   flex-direction: row;
@@ -13,6 +13,7 @@ header > div{
   
 }
 .titulo{
+  display: flex;
   margin-left: 70px;
   font-family: 'Open Sans';
 font-style: normal;
@@ -32,7 +33,7 @@ font-style: normal;
 font-weight: 600;
 font-size: 18px;
 line-height: 33px;
-/* identical to box height */
+
 
 text-align: center;
 
@@ -42,40 +43,48 @@ color: #FFFFFF;
   margin-left: 9.2%;
 }
 .centro{
-  height: 600px;
+  height: 581px;
   width: 100%;
   display: flex; 
+  flex-direction: column;
+  background-image: url(./images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
 }
-.centro > img{
-  height: 100%;
-  width: 100%;
-  z-index: -1;
-}
+
 .centro > p{
-  position: absolute;
+  
   font-family: 'Montserrat';
 font-style: normal;
 font-weight: 700;
 font-size: 40px;
 line-height: 49px;
-margin-left: 99px;
-margin-top: 140px;
+margin-left: 7.7vw;
+margin-top: 160px;
 color: #FFFFFF;
+margin-bottom: 0;
+
 }
 .busca{
   display: flex;
-  position: absolute;
-  width: 1000px;
-height: 99px;
-margin-left: 99px;
-margin-top: 255px;
+  flex-direction: row;
+  width: 78vw;
+height: 14.8vh;
+margin-left: 7.7vw;
 background: #FFFFFF;
 border-radius: 16px;
 padding-left:32px ;
+margin-top: 17px;
+max-width:1000px ;
+padding-right: 16px;
+margin-bottom: 30px;
 }
 .itembusca{
   display: flex;
-  align-items: center;
+  align-items:center;
+  justify-content: space-between;
+  
   width: 261px;
 height: 57px;
 margin-top: 21px;
@@ -89,15 +98,15 @@ font-style: normal;
 font-weight: 500;
 font-size: 24px;
 line-height: 29px;
-padding-left: 24px;
+padding-left: 1.87vw;
 color: #000000;
 }
 .itembusca > div{
   display: flex;
   justify-content: flex-end;
-  width: 200px;
+  width: 20%;
 height: 11px;
-margin-right: 18px;
+margin-right: 10%;
 
 }
 
@@ -105,7 +114,7 @@ margin-right: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 56px;
+  width: 4.37vw;
 height: 57px;
 background-color: #232323;
 border-radius: 8px;
