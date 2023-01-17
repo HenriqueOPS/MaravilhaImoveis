@@ -21,16 +21,33 @@ function Home() {
           <p>O Imóvel dos seus sonhos<br></br>
 a um click</p>
           <div className="busca">
-            <div className="itembusca">Cidade<div><img src={seta}></img></div></div>
-            <div className="itembusca">Bairro<div><img src={seta}></img></div></div>
-            <div className="itembusca">Tipo<div><img src={seta}></img></div></div>
+            <div className="itembusca1">Cidade<div><img src={seta}></img></div></div>
+            <div className="itembusca1">Bairro<div><img src={seta}></img></div></div>
+            <div className="itembusca1">Tipo<div><img src={seta}></img></div></div>
             <div className="icone"><img src={pesquisar}></img></div>
           </div>
        
          
 
       </div>
-     
+     <div className="abaixo">
+        <div className="comprar">
+          <h1>Comprar</h1>
+          <div className='comprar-filtros'>
+            <div className="itembusca2">Cidade<div><img src={seta}></img></div></div>
+            <div className="itembusca2">Bairro<div><img src={seta}></img></div></div>
+            <div className="itembusca2">Tipo<div><img src={seta}></img></div></div>
+            <div className='preco'>
+            <p>De</p><div className='preco-de'></div><p>Até</p>
+            <div className='preco-de'></div>
+          </div>
+          </div>
+          
+        </div>
+        <div className="imoveis">
+
+        </div>
+     </div>
     </>
   );
 }
