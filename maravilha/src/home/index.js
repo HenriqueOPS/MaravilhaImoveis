@@ -1,9 +1,13 @@
 import './home.css';
 import pesquisar from '../images/pesquisar.png';
 import seta from '../images/setabaixo.svg';
+import background from '../images/background.jpg';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 function Home() {
+ 
   return (
     <>
+    
     <style>
     @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
       @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Open+Sans:wght@600&display=swap');
@@ -12,7 +16,7 @@ function Home() {
       <header>
         <div className="titulo">Maravilha <br></br>Imóveis</div>
         <div className="caminhos">
-          <p>Comprar</p>
+         <AnchorLink href='#abaixo' className='texto'>Comprar</AnchorLink>
           <p>Anunciar</p>
           <p>Contatos</p>
         </div>
@@ -30,7 +34,7 @@ a um click</p>
          
 
       </div>
-     <div className="abaixo">
+     <div className="abaixo" id='abaixo'>
         <div className="comprar">
           <h1>Comprar</h1>
           <div className='comprar-filtros'>
@@ -38,18 +42,51 @@ a um click</p>
             <div className="itembusca2">Bairro<div><img src={seta}></img></div></div>
             <div className="itembusca2">Tipo<div><img src={seta}></img></div></div>
             <div className='preco'>
-            <p>De</p><div className='preco-de'></div><p>Até</p>
-            <div className='preco-de'></div>
+              <p>De</p><div className='preco-de'></div><p>Até</p>
+              <div className='preco-de'></div>
+            </div>
           </div>
-          </div>
-          
         </div>
         <div className="imoveis">
-
+            <div className='imovel'>
+                <img src={background}></img>
+                <div className='imoveis-descricao'> 
+                    <h3>Apartamento Mobiliado 133m<sup>2</sup></h3>
+                    <h4>Avenida 2333, Porto Alegre</h4>
+                    <h5>133m<sup>2</sup> 2 quartos 1 banheiro e 1 garagem com piscina</h5>
+                    <h2>R$320.0000</h2>
+                    <div>
+                      Mais informações
+                    </div>
+                </div>
+            </div>
+            <div className='imovel'>
+                <img src={background}></img>
+                <div className='imoveis-descricao'> 
+                    <h3>Apartamento Mobiliado 133m<sup>2</sup></h3>
+                    <h4>Avenida 2333, Porto Alegre</h4>
+                    <h5>133m<sup>2</sup> 2 quartos 1 banheiro e 1 garagem com piscina</h5>
+                    <h2>R$320.0000</h2>
+                    <div>
+                      Mais informações
+                    </div>
+                </div>
+            </div>
+            <div className='imovel'>
+                <img src={background}></img>
+                <div className='imoveis-descricao'> 
+                    <h3>Apartamento Mobiliado 133m<sup>2</sup></h3>
+                    <h4>Avenida 2333, Porto Alegre</h4>
+                    <h5>133m<sup>2</sup> 2 quartos 1 banheiro e 1 garagem com piscina</h5>
+                    <h2>R$320.0000</h2>
+                    <div>
+                      Mais informações
+                    </div>
+                </div>
+            </div>
         </div>
      </div>
     </>
   );
 }
-
 export default Home;
