@@ -1,8 +1,10 @@
 import Imoveis from '../models/Imoveis'
 class CrudImoveis{
-    store(req,res){
+    async store(req,res){
         const {nome} = req.body;
-        let imovel = Imoveis.create({nome});
+        let imovel = await Imoveis.create({nome});
+        console.log('acessada')
         return  res.json(imovel)
     }
 }
+export default new CrudImoveis

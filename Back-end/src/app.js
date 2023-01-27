@@ -1,8 +1,10 @@
 import express from 'express';
 import routes from './routes';
 import mongoose from 'mongoose';
+import cors from 'cors';
 class App{
     constructor(){
+
         this.server=express();
         mongoose.set("strictQuery", false);
         mongoose.connect('mongodb+srv://Dev:123@maravilha.hmyplgx.mongodb.net/test',{
@@ -13,6 +15,7 @@ class App{
         this.routes();
     }
     middlewares(){
+        this.server.use(cors())
         this.server.use(express.json())
     }
     routes(){
