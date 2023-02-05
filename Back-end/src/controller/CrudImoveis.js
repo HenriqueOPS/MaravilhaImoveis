@@ -10,5 +10,9 @@ class CrudImoveis{
         console.log('acessada')
         return  res.json(imovel)
     }
+    async index(req,res){
+        const imoveis = await Imoveis.find();
+        return res.json(imoveis)
+    }
 }
 export default new CrudImoveis

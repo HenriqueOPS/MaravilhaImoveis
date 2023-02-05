@@ -2,10 +2,8 @@ import './home.css';
 import pesquisar from '../images/pesquisar.png';
 import seta from '../images/setabaixo.svg';
 import AnchorLink from 'react-anchor-link-smooth-scroll';
-import api from '../api';
-import { useState } from 'react';
-import Imoveis from './imoveis/imoveis'
-import { useEffect } from 'react';
+import Imoveis from './imoveis/imoveis';
+import Geraimoveis from './imoveis/geradorimoveis';
 function Home() {
   const exemplo={
     nome:'apartamento',
@@ -63,30 +61,7 @@ a um click</p>
            localizacao={exemplo.localizacao}
            adicionais={exemplo.adicionais}
            preco={exemplo.preco}/>
-            <Imoveis 
-           nome={exemplo.nome}
-           metragem={exemplo.metragem}
-           localizacao={exemplo.localizacao}
-           adicionais={exemplo.adicionais}
-           preco={exemplo.preco}/>
-            <Imoveis 
-           nome={exemplo.nome}
-           metragem={exemplo.metragem}
-           localizacao={exemplo.localizacao}
-           adicionais={exemplo.adicionais}
-           preco={exemplo.preco}/>
-            <Imoveis 
-           nome={exemplo.nome}
-           metragem={exemplo.metragem}
-           localizacao={exemplo.localizacao}
-           adicionais={exemplo.adicionais}
-           preco={exemplo.preco}/>
-            <Imoveis 
-           nome={exemplo.nome}
-           metragem={exemplo.metragem}
-           localizacao={exemplo.localizacao}
-           adicionais={exemplo.adicionais}
-           preco={exemplo.preco}/>
+           <Geraimoveis/>
         </div>
      </div>
     </>

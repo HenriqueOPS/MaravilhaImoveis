@@ -5,4 +5,5 @@ routes.post('/imovel',CrudImoveis.store)
 routes.get('/',(req,res)=>{
     return res.json({ok:true})
 })
+routes.get('/imovel',CrudImoveis.index)
 export default routes
