@@ -14,5 +14,15 @@ class CrudImoveis{
         const imoveis = await Imoveis.find();
         return res.json(imoveis)
     }
+    async update(req,res){
+        const {nome}=req.file;
+        const {imovel_id}=req.params;
+        const {metragem,localizacao,adicionais,preco}=req.body;
+        const imovel= await Imoveis.updateOne({_id:imovel_id},{nome,
+            metragem,
+            localizacao,
+            adicionais,
+            preco});
+    }
 }
 export default new CrudImoveis

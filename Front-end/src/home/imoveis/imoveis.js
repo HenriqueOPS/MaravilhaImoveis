@@ -5,7 +5,7 @@ function Imoveis({nome,metragem,localizacao,adicionais,preco}){
         <div className='imovel'>
         <img src={background}></img>
         <div className='imoveis-descricao'> 
-            <h3>{nome},{metragem}<sup>2</sup></h3>
+            <h3>{nome},{metragem}m<sup>2</sup></h3>
             <h4>{localizacao}</h4>
             <h5>{metragem}<sup>2</sup> {adicionais}</h5>
             <h2>R${preco}</h2>

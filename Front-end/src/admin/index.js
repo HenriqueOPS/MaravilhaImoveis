@@ -1,6 +1,7 @@
 import './admin.css' ;
 import React,{Component} from 'react';
 import api from '../api'
+import Tabela from './tabela';
 class Admin extends Component{
     constructor(props){
     super(props);
@@ -67,6 +68,9 @@ class Admin extends Component{
                 value={this.state.preco} 
                 onChange={this.mudapreco}></input>
                 <button onClick={this.enviar}></button>
+                <div className='col'>
+                    <Tabela/>
+                </div>
             </>
         )
     }

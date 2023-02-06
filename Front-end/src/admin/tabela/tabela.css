@@ -1,0 +1,14 @@
+.row{
+    display: flex;
+    flex-direction: row;
+}
+.cel{
+    padding: 3px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    border: 1px solid black;
+   overflow: auto;
+    width: 150px;
+    height: 50px;
+}
