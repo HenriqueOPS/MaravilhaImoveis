@@ -1,11 +1,10 @@
 import api from "../../api";
 import React from 'react';
 import './tabela.css';
-function update({post}){
-  api.put('imovel/'+post._id,{
-    
-  })
-}
+  function update(post){
+  console.log(post._id)
+
+  }
 function Tabela(){
     const [post, setPost] = React.useState(null);
     React.useEffect(() => {
@@ -24,7 +23,7 @@ function Tabela(){
             <input type='text' className="cel" placeholder={post.adicionais}></input>
             <input type='text' className="cel" placeholder={post.preco}></input>
             <div className="cel">{post._id}</div>
-            <button></button>
+            <button onClick={()=>{update(post)}}></button>
           </div>
         ))}
         </>
