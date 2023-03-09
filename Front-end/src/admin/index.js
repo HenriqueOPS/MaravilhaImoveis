@@ -2,11 +2,20 @@ import './admin.css' ;
 import React,{Component} from 'react';
 import api from '../api';
 import './tabela.css';
+import Modal from 'react-modal'
 function update(post){
     console.log(post._id)
 }
+
 function Tabela(){
+    const [modal,setmodal] = React.useState(false);
     const [post, setPost] = React.useState(null);
+    function openmodal(){
+        setmodal(true)
+    }
+    function closemodal(){
+        setmodal(false)
+    }
     React.useEffect(() => {
         api.get('imovel').then((response) => {
           setPost(response.data);
@@ -24,6 +33,15 @@ function Tabela(){
             <input type='text' className="cel" placeholder={post.preco}></input>
             <div className="cel">{post._id}</div>
             <button onClick={()=>{update(post)}}></button>
+            <button onClick={openmodal}></button>
+            <Modal
+        isOpen={modal}
+        onRequestClose={closemodal}
+        contentLabel="Example Modal"
+
+      >
+        
+      </Modal>
           </div>
         ))}
         </>
